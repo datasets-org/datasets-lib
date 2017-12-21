@@ -2,7 +2,6 @@
 ![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![pip version](https://img.shields.io/pypi/v/datasets-lib.svg)
 ![pip wheel](https://img.shields.io/pypi/wheel/datasets-lib.svg)
-[![Build Status](https://travis-ci.org/datasets-org/datasets-lib.svg?branch=master)](https://travis-ci.org/datasets-org/datasets-lib)
 
 ## Install
 ```
