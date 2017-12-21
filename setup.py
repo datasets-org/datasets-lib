@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='datasets_lib',
-    version='1.0.0',
+    version='1.0.1',
     description='datasets library',
     url='https://github.com/datasets-org/datasets-lib',
     author='Vit Listik',
@@ -31,5 +31,5 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
     keywords="datasets",
-    packages=["datasets"],
+    packages=["datasets_lib"],
 )
