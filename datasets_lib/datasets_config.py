@@ -5,7 +5,8 @@ from confobj import ConfigBase
 
 
 class DatasetsConfig(Config):
-    def __init__(self, order: Tuple[ConfigBase] = None) -> None:
+    def __init__(self, order=None):
+        # type: (Tuple[ConfigBase]) -> None
         self.host = "localhost"
         self.port = 8000
         self.ssl = False

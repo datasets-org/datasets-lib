@@ -4,12 +4,13 @@ from urljoin import url_path_join
 from .datasets_config import DatasetsConfig
 
 
-# todo support python2
 class Datasets(object):
     """
         Library for datasets browsing and management
     """
-    def __init__(self, conf: DatasetsConfig = DatasetsConfig()) -> None:
+
+    def __init__(self, conf=DatasetsConfig()):
+        # type: (DatasetsConfig) -> None
         """
 
         Args:
@@ -17,7 +18,8 @@ class Datasets(object):
         """
         self.conf = conf
 
-    def list(self) -> dict:
+    def list(self):
+        # type: () -> dict
         """
         Get all projects
         Returns:
@@ -25,7 +27,8 @@ class Datasets(object):
         """
         return requests.get(self.get_address()).json()
 
-    def project_details(self, ds_id: str) -> dict:
+    def project_details(self, ds_id):
+        # type (str) -> dict
         """
         Get project details
         Args:
@@ -38,7 +41,8 @@ class Datasets(object):
                                           "detail",
                                           ds_id)).json()
 
-    def get_address(self) -> str:
+    def get_address(self):
+        # type: () -> str
         """
 
         Returns:

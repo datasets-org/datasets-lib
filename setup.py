@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='datasets_lib',
-    version='1.0.1',
+    version='1.1.0',
     description='datasets library',
     url='https://github.com/datasets-org/datasets-lib',
     author='Vit Listik',
@@ -22,6 +22,9 @@ setup(
 
         'License :: OSI Approved :: MIT License',
 
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
