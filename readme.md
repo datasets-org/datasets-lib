@@ -5,12 +5,12 @@
 
 ## Install
 ```
-pip install datasets-lib
+pip install datasets_lib
 ```
 
 ## Example
 ```python
-from datsets-lib import Datasets
+from datsets_lib import Datasets
 
 d = Datasets()
 d.list()
