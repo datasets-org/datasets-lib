@@ -37,6 +37,19 @@ class Datasets(object):
         # todo put/post?
         return requests.get(url_path_join(self.get_address(), "new")).json()
 
+    def use(self, ds_id, usage={}):
+        # type: (str, dict) -> dict
+        """Get dataset info with use note
+
+        Args:
+            ds_id (str): dataset id
+
+        Returns:
+            dict: dataset details
+        """
+        return requests.post(url_path_join(self.get_address(), "use", ds_id),
+                             json=usage).json()
+
     def scan(self):
         # type: () -> None
         """
