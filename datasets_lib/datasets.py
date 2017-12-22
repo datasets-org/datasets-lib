@@ -20,17 +20,34 @@ class Datasets(object):
 
     def list(self):
         # type: () -> dict
-        """
-        Get all projects
+        """ Get all projects
+
         Returns:
             dict: list of all datasets
         """
         return requests.get(self.get_address()).json()
 
+    def new(self):
+        # type: () -> dict
+        """Get new project ID
+
+        Returns:
+            dict: New dataset properties
+        """
+        # todo put/post?
+        return requests.get(url_path_join(self.get_address(), "new")).json()
+
+    def scan(self):
+        # type: () -> None
+        """
+        Force local fs rescan
+        """
+        return requests.get(url_path_join(self.get_address(), "scan"))
+
     def project_details(self, ds_id):
         # type (str) -> dict
-        """
-        Get project details
+        """ Get project details
+
         Args:
             ds_id (str): dataset id
 
