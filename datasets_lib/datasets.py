@@ -43,6 +43,7 @@ class Datasets(object):
 
         Args:
             ds_id (str): dataset id
+            usage (dict): usage details
 
         Returns:
             dict: dataset details
@@ -52,8 +53,7 @@ class Datasets(object):
 
     def scan(self):
         # type: () -> None
-        """
-        Force local fs rescan
+        """ Force local fs rescan
         """
         return requests.get(url_path_join(self.get_address(), "scan"))
 
@@ -70,6 +70,23 @@ class Datasets(object):
         return requests.get(url_path_join(self.get_address(),
                                           "detail",
                                           ds_id)).json()
+
+    def update(self, ds_id, data):
+        # type: (str, dict) -> None
+        """ Update project details
+
+        Args:
+            ds_id (str): dataset id
+            data (dict): new dataset properties
+        """
+        return requests.post(url_path_join(self.get_address(), "update", ds_id),
+                             json=data)
+
+    def reload(self):
+        # type: () -> None
+        """ Force server to reload DB
+        """
+        requests.post(url_path_join(self.get_address(), "reload"))
 
     def get_address(self):
         # type: () -> str

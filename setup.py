@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='datasets_lib',
-    version='1.2.1',
+    version='1.2.2',
     description='datasets library',
     url='https://github.com/datasets-org/datasets-lib',
     author='Vit Listik',
