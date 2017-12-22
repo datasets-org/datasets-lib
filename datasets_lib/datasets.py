@@ -28,14 +28,14 @@ class Datasets(object):
         return requests.get(self.get_address()).json()
 
     def new(self):
-        # type: () -> dict
+        # type: () -> str
         """Get new project ID
 
         Returns:
             dict: New dataset properties
         """
         # todo put/post?
-        return requests.get(url_path_join(self.get_address(), "new")).json()
+        return requests.get(url_path_join(self.get_address(), "new")).text
 
     def use(self, ds_id, usage={}):
         # type: (str, dict) -> dict
